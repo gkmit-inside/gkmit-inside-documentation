@@ -1,6 +1,6 @@
-# Use and Functional Cases
+# **Functional Use Cases**
 
-This section describes the interactive behavior and workflows within the GKMIT_INSIDE platform.
+This section describes the interactive behavior and workflows within the **GKMIT_INSIDE** platform.
 
 ## Post Submission Flow
 
@@ -32,8 +32,8 @@ Required fields:
 **Step 4: Confirmation**
 
 - User redirected to "Your Posts" page
-- Success message displayed (if approved)
 - Post visible with current status
+- The post changes to "Success" state (if approved)
 
 ---
 
@@ -53,10 +53,10 @@ This workflow describes how administrators review and approve content.
 
 - Admin clicks "Pending Posts" section
 - System displays list of submitted posts
-- Each post shows:
-  - Title and author
-  - Submission timestamp
-  - Preview/summary
+- Each post shows:  
+  -> Title and author  
+  -> Submission timestamp  
+  -> Preview/summary
 
 **Step 3: Detailed Review**
 
@@ -76,8 +76,8 @@ Admin chooses one of two actions:
 
 - Post status changes to "Accepted"
 - Post immediately appears on main feed
-- Author receives approval notification (implied)
-- Post visible to all users
+- Author receives approval at "Your Post"
+- Post visible to all users in "Feed"
 
 **Option B: Reject**
 
@@ -144,7 +144,8 @@ The system tracks and displays:
 
 Activities shown as:
 
-- "Username performed action on timestamp"
+-> "Username performed action on timestamp"
+
 - Examples:
   - "Akash posted 'Understanding REST APIs' 3hrs ago"
   - "Divyansh updated 'React Best Practices' 1hr ago"
