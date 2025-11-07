@@ -38,16 +38,6 @@ A dedicated section that displays recent community interactions to enhance aware
 - "Akash posted a new article on API authentication"
 - "Divyansh updated their post about React hooks"
 
-## Content Saving
-
-Users can bookmark posts for later reference, creating a personalized collection.
-
-**Benefits:**
-
-- Quick access to relevant content
-- Personal knowledge curation
-- Offline reference preparation
-
 ## Post Submission and Management
 
 Developers have access to a private workspace to manage their content contributions.
