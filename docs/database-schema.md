@@ -31,6 +31,7 @@ erDiagram
 		string title  ""
 		string subtitle  ""
 		string description  ""
+        array tags "['web', 'api', etc]"
 		string postStatus  "pending/approved/rejected"
 		boolean isPublished  "false/true"
 		number commentCount  ""
@@ -104,6 +105,7 @@ erDiagram
 | `title  `       | string   | Title of the post                                                      |
 | `subtitle`      | string   | Subtitle of the post                                                   |
 | `description`   | string   | Detailed content of the post                                           |
+| `tags`          | array    | List of tags for categorization (e.g., ['web', 'api', 'ui'])           |
 | `postStatus`    | string   | `pending` by default; updated to `approved` or `rejected` by admin     |
 | `isPublished`   | boolean  | `true` after approval; toggle to `false` hides from feed (soft delete) |
 | `commentCount`  | number   | Total number of comments                                               |
