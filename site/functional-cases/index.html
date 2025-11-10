@@ -1,0 +1,966 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Knowledge-sharing platform for the GKMIT community">
+      
+      
+        <meta name="author" content="GKMIT Team">
+      
+      
+      
+        <link rel="prev" href="../prototypes-endpoints/">
+      
+      
+        <link rel="next" href="../business-cases/">
+      
+      
+      <link rel="icon" href="../assets/images/gkmit_inside_favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>Use and Functional Cases - GKMIT INSIDE Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2a3383ac.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Outfit";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#functional-use-cases" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="GKMIT INSIDE Documentation" class="md-header__button md-logo" aria-label="GKMIT INSIDE Documentation" data-md-component="logo">
+      
+  <img src="../assets/images/gkmit_inside_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GKMIT INSIDE Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Use and Functional Cases
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="GKMIT INSIDE Documentation" class="md-nav__button md-logo" aria-label="GKMIT INSIDE Documentation" data-md-component="logo">
+      
+  <img src="../assets/images/gkmit_inside_logo.png" alt="logo">
+
+    </a>
+    GKMIT INSIDE Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../key-features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Key Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tech-stack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tech Stack
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database-schema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Database Schema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prototypes-endpoints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pages and Endpoints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Use and Functional Cases
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Use and Functional Cases
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#post-submission-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post Submission Flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post Submission Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-by-step-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-Step Process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-approval-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post Approval Flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post Approval Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-by-step-process_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-Step Process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content-display-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Display Flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Content Display Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-by-step-process_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-Step Process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-activity-tracking-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Activity Tracking Flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User Activity Tracking Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#activity-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activity Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Display Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-mechanism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Mechanism
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../business-cases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Business Cases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#post-submission-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post Submission Flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post Submission Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-by-step-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-Step Process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-approval-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post Approval Flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post Approval Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-by-step-process_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-Step Process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content-display-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Display Flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Content Display Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-by-step-process_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-Step Process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-activity-tracking-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Activity Tracking Flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User Activity Tracking Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#activity-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activity Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Display Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-mechanism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Mechanism
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="functional-use-cases"><strong>Functional Use Cases</strong></h1>
+<p>This section describes the interactive behavior and workflows within the <strong>GKMIT_INSIDE</strong> platform.</p>
+<h2 id="post-submission-flow">Post Submission Flow</h2>
+<p>This workflow describes how developers create and submit content for review.</p>
+<h3 id="step-by-step-process">Step-by-Step Process</h3>
+<p><strong>Step 1: Navigate to Add Post</strong></p>
+<ul>
+<li>Developer logs in</li>
+<li>Clicks "Add Post" from navigation menu</li>
+<li>System verifies Developer/Admin role</li>
+</ul>
+<p><strong>Step 2: Fill Post Form</strong></p>
+<p>Required fields:</p>
+<ul>
+<li>Post title</li>
+<li>Description/content body</li>
+<li>Image upload (optional)</li>
+<li>Code snippet (if applicable)</li>
+<li>Tags for categorization</li>
+</ul>
+<p><strong>Step 3:Submit</strong></p>
+<ul>
+<li>Post status changed to "Pending"</li>
+<li>Appears in Admin's pending queue</li>
+</ul>
+<p><strong>Step 4: Confirmation</strong></p>
+<ul>
+<li>User redirected to "Your Posts" page</li>
+<li>Post visible with current status</li>
+<li>The post changes to "Success" state (if approved)</li>
+</ul>
+<hr />
+<h2 id="post-approval-flow">Post Approval Flow</h2>
+<p>This workflow describes how administrators review and approve content.</p>
+<h3 id="step-by-step-process_1">Step-by-Step Process</h3>
+<p><strong>Step 1: Access Admin Dashboard</strong></p>
+<ul>
+<li>Admin logs in</li>
+<li>Navigates to Admin Dashboard</li>
+<li>Views pending posts count</li>
+</ul>
+<p><strong>Step 2: Review Pending Posts</strong></p>
+<ul>
+<li>Admin clicks "Pending Posts" section</li>
+<li>System displays list of submitted posts</li>
+<li>Each post shows:<br />
+  -&gt; Title and author<br />
+  -&gt; Submission timestamp<br />
+  -&gt; Preview/summary</li>
+</ul>
+<p><strong>Step 3: Detailed Review</strong></p>
+<p>Admin clicks on a specific post to view:</p>
+<ul>
+<li>Complete post content</li>
+<li>Attached images</li>
+<li>Code snippets</li>
+<li>Tags and category</li>
+<li>Author information</li>
+</ul>
+<p><strong>Step 4: Decision Making</strong></p>
+<p>Admin chooses one of two actions:</p>
+<p><strong>Option A: Approve</strong></p>
+<ul>
+<li>Post status changes to "Accepted"</li>
+<li>Post immediately appears on main feed</li>
+<li>Author receives approval at "Your Post"</li>
+<li>Post visible to all users in "Feed"</li>
+</ul>
+<p><strong>Option B: Reject</strong></p>
+<ul>
+<li>Post status changes to "Rejected"</li>
+<li>Post returns to author's "Your Posts"</li>
+<li>Feedback message attached (optional)</li>
+<li>Author can edit and resubmit</li>
+</ul>
+<p><strong>Step 5: Workflow Completion</strong></p>
+<ul>
+<li>Post removed from pending queue</li>
+<li>Dashboard statistics updated</li>
+<li>Feed refreshed if approved</li>
+</ul>
+<hr />
+<h2 id="content-display-flow">Content Display Flow</h2>
+<p>This workflow describes how content appears and loads on the main feed.</p>
+<h3 id="step-by-step-process_2">Step-by-Step Process</h3>
+<p><strong>Step 1: User Accesses Feed</strong></p>
+<ul>
+<li>Any logged-in user navigates to feed page.</li>
+<li>System queries database for accepted posts</li>
+</ul>
+<p><strong>Step 2: Content Rendering</strong></p>
+<p>Each post displays:</p>
+<ul>
+<li>Post title (bold, prominent)</li>
+<li>Author username</li>
+<li>Relative timestamp</li>
+<li>Post description/preview</li>
+<li>Featured image (if provided)</li>
+</ul>
+<p><strong>Step 3: User Interactions</strong></p>
+<p>Users can:</p>
+<ul>
+<li>Click post to view full details</li>
+<li>Save post to personal collection</li>
+<li>Search for specific content</li>
+<li>Filter by tags/categories</li>
+</ul>
+<hr />
+<h2 id="user-activity-tracking-flow">User Activity Tracking Flow</h2>
+<p>This workflow describes how user actions are tracked and displayed.</p>
+<h3 id="activity-types">Activity Types</h3>
+<p>The system tracks and displays:</p>
+<ul>
+<li>New post submissions</li>
+<li>Post updates/edits</li>
+<li>New user registrations</li>
+<li>Post approvals</li>
+<li>Significant interactions</li>
+</ul>
+<h3 id="display-format">Display Format</h3>
+<p>Activities shown as:</p>
+<p>-&gt; "Username performed action on timestamp"</p>
+<ul>
+<li>Examples:</li>
+<li>"Akash posted 'Understanding REST APIs' 3hrs ago"</li>
+<li>"Divyansh updated 'React Best Practices' 1hr ago"</li>
+<li>"New user Priya joined the platform today"</li>
+</ul>
+<h3 id="update-mechanism">Update Mechanism</h3>
+<ul>
+<li>Real-time or near-real-time updates</li>
+<li>Activity feed refreshes periodically</li>
+<li>Recent activities prioritized</li>
+<li>Historical activities archived after period</li>
+</ul>
+<hr />
+<!--
+## Save Post Flow
+
+Simple workflow for bookmarking content.
+
+**Step 1:** User views post on feed
+
+**Step 2:** User clicks "Save" button/icon
+
+**Step 3:** System adds post to user's saved collection
+
+**Step 4:** Confirmation message appears
+
+**Step 5:** Post accessible via `/saved` endpoint
+
+**To Remove:**
+
+- Navigate to saved posts
+- Click "Remove" on specific post
+- Post removed from collection
+
+---
+
+## Edit Post Flow
+
+Workflow for modifying existing content.
+
+**Step 1:** Developer navigates to "Your Posts"
+
+**Step 2:** Filters for posts needing edits (usually Rejected)
+
+**Step 3:** Clicks edit icon/button on specific post
+
+**Step 4:** System loads post data into edit form
+
+**Step 5:** Developer modifies content as needed
+
+**Step 6:** Developer saves changes (returns to Draft) or resubmits
+
+**Step 7:** Post enters appropriate workflow based on action
+
+---
+
+## Search Flow
+
+Workflow for finding specific content.
+
+**Step 1:** User enters search query in search bar
+
+**Step 2:** System queries database across:
+
+- Post titles
+- Post descriptions
+- Tags
+- Author names
+
+**Step 3:** Results displayed with relevance ranking
+
+**Step 4:** User clicks result to view full post
+
+**Step 5:** Search history maintained for session (optional) -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/GKMIT-Inside/Documentation" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.instant", "navigation.tracking", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
