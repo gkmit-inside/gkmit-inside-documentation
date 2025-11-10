@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#database-schema" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -301,6 +306,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Database Schema
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -313,6 +333,103 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Table Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table: USERS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-posts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table: POSTS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table: COMMENTS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-reactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table: REACTIONS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-bookmarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table: BOOKMARKS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -401,6 +518,94 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Table Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table: USERS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-posts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table: POSTS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table: COMMENTS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-reactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table: REACTIONS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-bookmarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table: BOOKMARKS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -416,8 +621,12 @@
 
 
 
-  <h1>Database Schema</h1>
-
+<h1 id="database-schema"><strong>Database Schema</strong></h1>
+<h2 id="overview">Overview</h2>
+<p>The database for the platform is designed using a modular approach, primarily centered around users, posts, and their interactions. Each user can create posts, react, comment, and bookmark them. Posts are moderated and managed by admins.</p>
+<p>Soft deletion is implemented for reversible actions and moderation flexibility.<br />
+This design ensures scalability, maintainability, and clear ownership across entities.</p>
+<h2 id="schema">Schema</h2>
 <pre class="mermaid"><code>erDiagram
     direction TB
     USERS {
@@ -483,6 +692,287 @@
     POSTS||--o{BOOKMARKS:"bookmarked_in"
 
 </code></pre>
+<h2 id="table-description"><strong>Table Description</strong></h2>
+<h3 id="table-users">Table: <code>USERS</code></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>_id</code></td>
+<td>ObjectId</td>
+<td>Unique ID created after registration</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>Name of the user</td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>string</td>
+<td>Email ID for unique identification (no duplicates)</td>
+</tr>
+<tr>
+<td><code>passwordHash</code></td>
+<td>string</td>
+<td>Hashed password string</td>
+</tr>
+<tr>
+<td><code>role</code></td>
+<td>string</td>
+<td>Role of user (<code>admin</code> / <code>employee</code>)</td>
+</tr>
+<tr>
+<td><code>department</code></td>
+<td>string</td>
+<td>Department of the user (<code>hr</code> / <code>recruitment</code> / <code>developer</code>)</td>
+</tr>
+<tr>
+<td><code>isApproved</code></td>
+<td>boolean</td>
+<td><code>false</code> by default; becomes <code>true</code> once approved by admin</td>
+</tr>
+<tr>
+<td><code>createdAt</code></td>
+<td>date</td>
+<td>Timestamp of creation</td>
+</tr>
+<tr>
+<td><code>updatedAt</code></td>
+<td>date</td>
+<td>Timestamp of last update</td>
+</tr>
+<tr>
+<td><code>deletedAt</code></td>
+<td>date</td>
+<td>Timestamp of soft deletion</td>
+</tr>
+</tbody>
+</table>
+<h3 id="table-posts">Table: <code>POSTS</code></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>_id</code></td>
+<td>ObjectId</td>
+<td>Auto-generated post ID</td>
+</tr>
+<tr>
+<td><code>userId</code></td>
+<td>ObjectId</td>
+<td>Reference to USERS</td>
+</tr>
+<tr>
+<td><code>mediaUrl</code></td>
+<td>string</td>
+<td>Cloud storage link of uploaded media</td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td>string</td>
+<td>Title of the post</td>
+</tr>
+<tr>
+<td><code>subtitle</code></td>
+<td>string</td>
+<td>Subtitle of the post</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>string</td>
+<td>Detailed content of the post</td>
+</tr>
+<tr>
+<td><code>postStatus</code></td>
+<td>string</td>
+<td><code>pending</code> by default; updated to <code>approved</code> or <code>rejected</code> by admin</td>
+</tr>
+<tr>
+<td><code>isPublished</code></td>
+<td>boolean</td>
+<td><code>true</code> after approval; toggle to <code>false</code> hides from feed (soft delete)</td>
+</tr>
+<tr>
+<td><code>commentCount</code></td>
+<td>number</td>
+<td>Total number of comments</td>
+</tr>
+<tr>
+<td><code>reactionCount</code></td>
+<td>number</td>
+<td>Total number of reactions</td>
+</tr>
+<tr>
+<td><code>bookmarkCount</code></td>
+<td>number</td>
+<td>Total number of bookmarks</td>
+</tr>
+<tr>
+<td><code>approvedAt</code></td>
+<td>date</td>
+<td>Timestamp when post was approved</td>
+</tr>
+<tr>
+<td><code>createdAt</code></td>
+<td>date</td>
+<td>Timestamp of creation</td>
+</tr>
+<tr>
+<td><code>updatedAt</code></td>
+<td>date</td>
+<td>Timestamp of last update</td>
+</tr>
+<tr>
+<td><code>deletedAt</code></td>
+<td>date</td>
+<td>Timestamp of soft deletion</td>
+</tr>
+</tbody>
+</table>
+<h3 id="table-comments">Table: <code>COMMENTS</code></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>_id</code></td>
+<td>ObjectId</td>
+<td>Generated when comment is added</td>
+</tr>
+<tr>
+<td><code>postId</code></td>
+<td>ObjectId</td>
+<td>Reference to POSTS</td>
+</tr>
+<tr>
+<td><code>userId</code></td>
+<td>ObjectId</td>
+<td>Reference to USERS</td>
+</tr>
+<tr>
+<td><code>content</code></td>
+<td>string</td>
+<td>Text content of the comment</td>
+</tr>
+<tr>
+<td><code>isCommented</code></td>
+<td>boolean</td>
+<td><code>true</code> by default; set to <code>false</code> when soft-deleted</td>
+</tr>
+<tr>
+<td><code>createdAt</code></td>
+<td>date</td>
+<td>Timestamp of creation</td>
+</tr>
+<tr>
+<td><code>updatedAt</code></td>
+<td>date</td>
+<td>Timestamp of last update</td>
+</tr>
+<tr>
+<td><code>deletedAt</code></td>
+<td>date</td>
+<td>Timestamp of soft deletion</td>
+</tr>
+</tbody>
+</table>
+<h3 id="table-reactions">Table: <code>REACTIONS</code></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>_id</code></td>
+<td>ObjectId</td>
+<td>Generated when a post is bookmarked</td>
+</tr>
+<tr>
+<td><code>postId</code></td>
+<td>ObjectId</td>
+<td>Reference to POSTS</td>
+</tr>
+<tr>
+<td><code>userId</code></td>
+<td>ObjectId</td>
+<td>Reference to USERS</td>
+</tr>
+<tr>
+<td><code>isMarked</code></td>
+<td>boolean</td>
+<td><code>true</code> by default; set to <code>false</code> if unbookmarked</td>
+</tr>
+<tr>
+<td><code>createdAt</code></td>
+<td>date</td>
+<td>Timestamp of bookmark creation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="table-bookmarks">Table: <code>BOOKMARKS</code></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>_id</code></td>
+<td>ObjectId</td>
+<td>Generated when a user reacts to a post</td>
+</tr>
+<tr>
+<td><code>postId</code></td>
+<td>ObjectId</td>
+<td>Reference to POSTS</td>
+</tr>
+<tr>
+<td><code>userId</code></td>
+<td>ObjectId</td>
+<td>Reference to USERS</td>
+</tr>
+<tr>
+<td><code>reactionType</code></td>
+<td>string</td>
+<td>Type of reaction (emoji, like, etc.)</td>
+</tr>
+<tr>
+<td><code>isMarked</code></td>
+<td>boolean</td>
+<td><code>true</code> by default; set to <code>false</code> if unreacted</td>
+</tr>
+<tr>
+<td><code>createdAt</code></td>
+<td>date</td>
+<td>Timestamp of reaction creation</td>
+</tr>
+</tbody>
+</table>
 
 
 
