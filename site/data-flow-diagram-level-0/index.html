@@ -447,9 +447,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-of-level-0-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow of Level 0 Diagram
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#explanation" class="md-nav__link">
     <span class="md-ellipsis">
       Explanation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
     </span>
   </a>
   
@@ -657,19 +684,40 @@
 
 
 <h1 id="level-0-context-diagram"><strong>Level 0 — Context Diagram</strong></h1>
-<p>This <strong>Level 0 Data Flow Diagram (DFD)</strong> provides a high-level overview of the <strong>GKMIT_INSIDE</strong> platform’s data flow between users, the system, and the database. It shows how information moves between external entities (Employee and Admin), the main system process, and the MongoDB database.</p>
-<p>This diagram illustrates the <strong>high-level data flow</strong> between the two primary user roles — <strong>Admin</strong> and <strong>Employee</strong> — and the central system, <strong>GKMIT_INSIDE</strong>.</p>
-<p>It highlights how users interact with the platform for registration, posting, approvals, and content access, while the system handles data storage and processing via <strong>MongoDB</strong>.</p>
+<h2 id="overview">Overview</h2>
+<p>This <strong>Level 0 Data Flow Diagram (DFD)</strong> provides a high-level overview of the <strong>GKMIT_INSIDE</strong> platform, illustrating how data moves between <strong>external entities</strong> (Employee and Admin), the <strong>main system</strong>, and the <strong>MongoDB database</strong>.</p>
+<p>It highlights how both <strong>Admin</strong> and <strong>Employee</strong> users interact with the platform — for registration, posting, approvals, and content access — while the system handles core logic and persistent data management through <strong>MongoDB</strong>.</p>
 <hr />
-<!-- impoting image of dfd level 0 -->
+<h2 id="workflow-of-level-0-diagram">Workflow of Level 0 Diagram</h2>
+<!-- Importing image of DFD Level 0 -->
 
 <p><img alt="DFD: Level - 0" src="../assets/images/dfd-level-0.png" width="2800" /></p>
 <hr />
-<h3 id="explanation">Explanation</h3>
-<p>Employee can register, log in, and create posts that await admin approval. Admin oversees user and post approvals, manages analytics, and has all employee privileges.</p>
-<p><strong>GKMIT_INSIDE</strong> is the central application system that processes requests, manages workflows, and communicates with the database.
-MongoDB Database stores all persistent data — including users, posts, comments, reactions, and bookmarks.</p>
-<p>This diagram represents the Level 0 Context View, showing external entities and major data exchanges with the system as a single logical process.</p>
+<h2 id="explanation">Explanation</h2>
+<p><strong>Employee</strong></p>
+<ul>
+<li>Can register, log in, and create posts.</li>
+<li>All newly created posts remain in a <em>pending</em> state until reviewed and approved by an Admin.</li>
+</ul>
+<p><strong>Admin</strong></p>
+<ul>
+<li>Oversees user and post approvals, manages analytics, and has access to all employee-level features.</li>
+<li>Admins ensure that only compliant and approved content is published.</li>
+</ul>
+<p><strong>GKMIT_INSIDE (System Process)</strong></p>
+<ul>
+<li>Acts as the <strong>central application hub</strong> — handling user authentication, post workflows, data validation, and communication between clients and the database.</li>
+</ul>
+<p><strong>MongoDB Database</strong></p>
+<ul>
+<li>Serves as the <strong>primary data store</strong>, maintaining all persistent information such as users, posts, comments, reactions, and bookmarks.</li>
+</ul>
+<hr />
+<h2 id="summary">Summary</h2>
+<ul>
+<li>This diagram represents the <strong>Level 0 Context View</strong> of the GKMIT_INSIDE system.</li>
+<li>It shows external entities (Employee and Admin) and their high-level interactions with the central process — <strong>GKMIT_INSIDE</strong> — which, in turn, exchanges and manages data through the <strong>MongoDB database</strong>.</li>
+</ul>
 
 
 
