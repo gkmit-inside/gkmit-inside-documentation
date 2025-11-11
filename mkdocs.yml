@@ -65,6 +65,8 @@ nav:
   - Data Flow Diagrams:
       - Level 0 DFD: data-flow-diagram-level-0.md
       - Level 1 DFD: data-flow-diagram-level-1.md
+      # - Level 2 DFD:
+      #     - Authentication Module 1: auth-module.md
   - Use and Functional Cases: functional-cases.md
   - Business Cases: business-cases.md
 
