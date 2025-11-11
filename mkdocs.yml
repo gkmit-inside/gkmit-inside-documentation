@@ -67,6 +67,7 @@ nav:
       - Level 1 DFD: data-flow-diagram-level-1.md
       - Level 2 DFD:
           - Authentication Module : auth-module.md
+          - User Management Module : user-management-module.md
           - Post Management Module : post-management-module.md
   - Use and Functional Cases: functional-cases.md
   - Business Cases: business-cases.md
