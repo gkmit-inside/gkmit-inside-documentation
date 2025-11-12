@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../key-features/">
+        <link rel="prev" href="../prototypes-endpoints/">
       
       
-        <link rel="next" href="../database-schema/">
+        <link rel="next" href="../data-flow-diagram-level-0/">
       
       
       <link rel="icon" href="../assets/images/gkmit_inside_favicon.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Tech Stack - GKMIT INSIDE Documentation</title>
+        <title>System Architecture - GKMIT INSIDE Documentation</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#technology-stack" class="md-skip">
+        <a href="#aws-system-architecture-overview" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tech Stack
+              System Architecture
             
           </span>
         </div>
@@ -275,32 +275,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Tech Stack
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../tech-stack/" class="md-nav__link">
         
   
   
@@ -311,59 +289,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#stack-overview-stable-versions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Stack Overview (Stable Versions)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#system-architecture-diagram" class="md-nav__link">
-    <span class="md-ellipsis">
-      System Architecture Diagram
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="System Architecture Diagram">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -416,10 +341,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../system-architecture/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    System Architecture
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -430,6 +377,101 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-the-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview of the Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-deployment-workflow-cicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Deployment Workflow (CI/CD)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Deployment Workflow (CI/CD)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frontend-deployment-vercel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frontend Deployment (Vercel)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backend-deployment-aws-ec2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backend Deployment (AWS EC2)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-runtime-workflow-data-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Runtime Workflow (Data Flow)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -802,158 +844,68 @@
 
 
 
-<h1 id="technology-stack"><strong>Technology Stack</strong></h1>
-<p>GKMIT_INSIDE is built using modern web technologies to ensure performance, scalability, and maintainability.</p>
-<!-- <div style="display: flex; justify-content: start; align-items: center; gap: 30px;">
-  <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React" width="75">
-  <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" alt="Node.js" width="75">
-  <img src="https://cdn.worldvectorlogo.com/logos/express-109.svg" alt="Express.js" width="100" style="background-color: white; padding: 0.2rem">
-  <img src="https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" alt="MongoDB" width="75">
-  <img src="https://cdn.worldvectorlogo.com/logos/tailwindcss.svg" alt="TailwindCSS" width="75">
-</div> -->
-
-<div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 30px;">
-
-  <!-- ReactJS -->
-  <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="ReactJS" width="90">
-
-  <!-- TailwindCSS -->
-  <img src="https://cdn.worldvectorlogo.com/logos/tailwindcss.svg" alt="TailwindCSS" width="90">
-
-  <!-- Shadcn UI -->
-  <img src="https://avatars.githubusercontent.com/u/139895814?s=200&v=4" alt="Shadcn UI" width="90" style="border-radius: 10px;">
-
-  <!-- Node.js -->
-  <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" alt="Node.js" width="90">
-
-  <!-- Express.js -->
-  <span style="display:inline-flex;align-items:center;justify-content:center;width:85px;height:85px;background:white;padding:6px;border-radius:10px;box-shadow:0 1px 2px rgba(0,0,0,0.08);">
-    <img src="https://cdn.worldvectorlogo.com/logos/express-109.svg" alt="Express.js" width="100">
-  </span>
-
-  <!-- MongoDB -->
-  <img src="https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" alt="MongoDB" width="90">
-
-  <!-- Vercel -->
-  <img style="display:inline-flex;align-items:center;justify-content:center;width:85px;height:85px;background:white;padding:6px;border-radius:10px;box-shadow:0 1px 2px rgba(0,0,0,0.08);" src="https://cdn.worldvectorlogo.com/logos/vercel.svg" alt="Vercel" width="100">
-</div>
-
-<h2 id="stack-overview-stable-versions"><strong>Stack Overview (Stable Versions)</strong></h2>
-<table>
-<thead>
-<tr>
-<th><strong>Category</strong></th>
-<th><strong>Technology</strong></th>
-<th><strong>Stable Version</strong></th>
-<th><strong>Purpose</strong></th>
-<th><strong>Version (LTS)</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Frontend Framework</strong></td>
-<td>ReactJS</td>
-<td>v19.2.0</td>
-<td>Core Library / Fast UI Rendering</td>
-<td>✅ LTS</td>
-</tr>
-<tr>
-<td><strong>Build Tool</strong></td>
-<td>Vite</td>
-<td>v7.2</td>
-<td>Next-gen Frontend Tooling</td>
-<td>✅ LTS</td>
-</tr>
-<tr>
-<td><strong>State Management</strong></td>
-<td>Context API</td>
-<td>N/A (Core)</td>
-<td>Global State Management</td>
-<td>✅ Included in React</td>
-</tr>
-<tr>
-<td><strong>Styling Framework</strong></td>
-<td>Tailwind CSS</td>
-<td>v4.1.13</td>
-<td>Utility-first CSS Styling</td>
-<td>✅ Stable</td>
-</tr>
-<tr>
-<td><strong>UI Component Library</strong></td>
-<td>Shadcn/UI</td>
-<td>v0.9.5</td>
-<td>Accessible &amp; Customizable UI</td>
-<td>✅ Stable</td>
-</tr>
-<tr>
-<td><strong>Backend Runtime</strong></td>
-<td>Node.js</td>
-<td>v24.x</td>
-<td>Server-side Logic Runtime</td>
-<td>✅ LTS</td>
-</tr>
-<tr>
-<td><strong>Backend Framework</strong></td>
-<td>Express.js</td>
-<td>v5.1.0</td>
-<td>API Routes and Middleware Logic</td>
-<td>✅ Stable</td>
-</tr>
-<tr>
-<td><strong>Authentication</strong></td>
-<td>JWT</td>
-<td>v9.0.2</td>
-<td>Token-based Security</td>
-<td>✅ Stable</td>
-</tr>
-<tr>
-<td><strong>Database</strong></td>
-<td>MongoDB</td>
-<td>v8.0</td>
-<td>NoSQL Document Database</td>
-<td>✅ LTS</td>
-</tr>
-<tr>
-<td><strong>Frontend Deployment</strong></td>
-<td>Vercel</td>
-<td>N/A (Platform)</td>
-<td>Frontend Hosting Platform</td>
-<td>✅ Managed</td>
-</tr>
-<tr>
-<td><strong>Backend Deployment</strong></td>
-<td>Render</td>
-<td>N/A (Platform)</td>
-<td>Backend Hosting Platform</td>
-<td>✅ Managed</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="system-architecture-diagram">System Architecture Diagram</h2>
-<pre class="mermaid"><code>graph LR
-    subgraph "Client Layer"
-    A[React + Context API + TailwindCSS + Shadcn]
-    end
-
-    subgraph "Application Layer"
-    B[Node.js + Express + JWT]
-    end
-
-    subgraph "Database Layer"
-    C[MongoDB]
-    end
-
-    A --&gt;|HTTPS/REST API| B
-    B --&gt;|MongoDB Driver| C</code></pre>
-<hr />
-<h3 id="summary"><strong>Summary</strong></h3>
-<p>This technology stack is built on <strong>modern, long-term stable (LTS)</strong> releases ensuring security, performance, and maintainability.</p>
+<h1 id="aws-system-architecture-overview"><strong>AWS System Architecture Overview</strong></h1>
+<h2 id="overview-of-the-architecture"><strong>Overview of the Architecture</strong></h2>
+<p>This architecture illustrates a <strong>hybrid deployment model</strong> where the <strong>frontend</strong> is hosted on <strong>Vercel</strong>, while the <strong>backend (API/server)</strong> and data infrastructure reside within <strong>Amazon Web Services (AWS)</strong>.<br />
+This setup leverages the strengths of both platforms:</p>
 <ul>
-<li><strong>Frontend:</strong> React, Vite, Tailwind, and Shadcn/UI deliver a fast, modular, and elegant UI layer.</li>
-<li><strong>Backend:</strong> Node.js and Express.js ensure robust, scalable API development.</li>
-<li><strong>Data Layer:</strong> MongoDB provides flexible NoSQL storage optimized for scalability.</li>
-<li><strong>Deployment:</strong> Vercel and Render streamline CI/CD pipelines with managed hosting for both frontend and backend.</li>
+<li><strong>Vercel</strong> → optimized for global, fast frontend delivery.</li>
+<li><strong>AWS Cloud</strong> → provides a secure, scalable, and customizable backend environment.</li>
+</ul>
+<p><img alt="Auth DFD: Level - 2" height="2600" src="../assets/images/aws-arch.png" width="2900" /></p>
+<p>The system serves users who access the Vercel-hosted frontend. The frontend communicates with the backend running on an <strong>EC2 instance</strong> within a protected <strong>AWS Virtual Private Cloud (VPC)</strong>.</p>
+<hr />
+<h2 id="workflow"><strong>Workflow</strong></h2>
+<p>The system workflow can be categorized into two major flows — <strong>Deployment Workflow</strong> and <strong>Runtime Data Flow</strong>.</p>
+<h3 id="1-deployment-workflow-cicd"><strong>1. Deployment Workflow (CI/CD)</strong></h3>
+<p>The deployment pipeline handles client (frontend) and server (backend) code separately:</p>
+<h4 id="frontend-deployment-vercel"><strong>Frontend Deployment (Vercel)</strong></h4>
+<ul>
+<li>The <strong>frontend Git repository</strong> is connected directly to <strong>Vercel</strong>.</li>
+<li>Any push to the <code>main</code> or deployment branch triggers <strong>Auto Deploy</strong>.</li>
+<li>Vercel builds and deploys the frontend globally for fast user access.</li>
+</ul>
+<h4 id="backend-deployment-aws-ec2"><strong>Backend Deployment (AWS EC2)</strong></h4>
+<ul>
+<li>The <strong>backend Git repository</strong> uses a <strong>GitHub Actions Deploy Pipeline</strong>.</li>
+<li>The workflow packages the backend code and deploys it to <strong>Amazon EC2</strong>, located in the <strong>Public Subnet</strong> of the <strong>VPC</strong>.</li>
+<li>The deployment ensures that the backend remains up-to-date and securely hosted inside the AWS infrastructure.</li>
+</ul>
+<hr />
+<h3 id="2-runtime-workflow-data-flow"><strong>2. Runtime Workflow (Data Flow)</strong></h3>
+<p>The runtime flow defines how data moves between the user, frontend, backend, and external data services:</p>
+<ol>
+<li>
+<p><strong>User Request</strong><br />
+   Users access the web application via the <strong>Vercel Frontend Deployment</strong>.</p>
+</li>
+<li>
+<p><strong>API Interaction</strong><br />
+   The frontend communicates with the <strong>AWS EC2 Backend</strong> through secure REST API calls, handling operations such as data fetching and form submission.</p>
+</li>
+<li>
+<p><strong>Data Persistence</strong><br />
+   The EC2 backend interacts with two key external data services:</p>
+</li>
+<li>
+<p><strong>MongoDB Atlas</strong> → For primary database operations (structured app data).</p>
+</li>
+<li>
+<p><strong>ImageKit</strong> → For image storage, optimization, and delivery.</p>
+</li>
+<li>
+<p><strong>Response</strong><br />
+   The backend processes logic, retrieves or updates data as required, and sends a structured response to the <strong>Vercel frontend</strong>, which renders the final user-facing output.</p>
+</li>
+</ol>
+<hr />
+<h2 id="summary"><strong>Summary</strong></h2>
+<p>This <strong>AWS-Vercel Hybrid Architecture</strong> achieves a balance of performance, security, and scalability:</p>
+<ul>
+<li><strong>Vercel</strong> ensures <strong>fast, global content delivery</strong> for the frontend.</li>
+<li><strong>AWS EC2</strong> provides a <strong>secure, private compute environment</strong> for backend logic.</li>
+<li><strong>MongoDB Atlas</strong> and <strong>ImageKit</strong> deliver <strong>scalable storage and media handling</strong>.</li>
+<li>Together, they form a <strong>modern, modular cloud architecture</strong> designed for real-time performance and maintainable infrastructure.</li>
 </ul>
 
 
