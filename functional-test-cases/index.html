@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tc_0-authentication-module" class="md-skip">
+        <a href="#tc-1-authentication-and-authorization" class="md-skip">
           Skip to content
         </a>
       
@@ -729,6 +729,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -761,6 +763,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -769,9 +773,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tc_0-authentication-module" class="md-nav__link">
+  <a href="#tc-1a-login-test-cases" class="md-nav__link">
     <span class="md-ellipsis">
-      TC_0: Authentication Module
+      TC 1.A: Login Test Cases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tc-1b-logout-session-management-test-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      TC 1.B: Logout &amp; Session Management Test Cases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tc-1c-authorization-role-based-access-control-test-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      TC 1.C: Authorization (Role-based Access Control) Test Cases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tc-2-registration-test-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧾 TC 2: Registration Test Cases
     </span>
   </a>
   
@@ -853,9 +884,8 @@
 
 
 
-  <h1>Functional Test Cases</h1>
-
-<h2 id="tc_0-authentication-module"><strong>TC_0: Authentication Module</strong></h2>
+<h1 id="tc-1-authentication-and-authorization"><strong>TC 1: Authentication and Authorization</strong></h1>
+<h2 id="tc-1a-login-test-cases">TC 1.A: Login Test Cases</h2>
 <table>
 <thead>
 <tr>
@@ -867,70 +897,214 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>T_C_0.1</strong></td>
+<td><strong>T_C_1.1</strong></td>
 <td>Login</td>
-<td>Verify a valid combination of Employee Username and Password allows successful login.</td>
-<td>The system must grant access to the Employee dashboard/landing page, and the correct user name/profile must be displayed.</td>
+<td>Verify a valid combination of Employee email and Password allows successful login.</td>
+<td>The system must grant access to the Employee <code>/feed</code> page, and the correct name must be displayed.</td>
 </tr>
 <tr>
-<td><strong>T_C_0.2</strong></td>
+<td><strong>T_C_1.2</strong></td>
 <td>Login</td>
-<td>Verify a valid combination of Admin Username and Password allows successful login.</td>
-<td>The system must grant access to the Admin dashboard/landing page, and the correct user name/profile must be displayed.</td>
+<td>Verify a valid combination of Admin email and Password allows successful login.</td>
+<td>The system must grant access to the Admin dashboard, and the correct user name must be displayed.</td>
 </tr>
 <tr>
-<td><strong>T_C_0.3</strong></td>
+<td><strong>T_C_1.3</strong></td>
 <td>Login</td>
-<td>Verify login fails with a valid username and an invalid password (for any role).</td>
+<td>Verify login fails with a valid email and an invalid password (for any role).</td>
 <td>An appropriate error message must be displayed (e.g., "Invalid credentials" or "Invalid password"), and the user must remain on the login page.</td>
 </tr>
 <tr>
-<td><strong>T_C_0.4</strong></td>
+<td><strong>T_C_1.4</strong></td>
 <td>Login</td>
-<td>Verify login fails with an invalid username and a valid password (for any role).</td>
-<td>An appropriate error message must be displayed (e.g., "Invalid credentials" or "Invalid username"), and the user must remain on the login page.</td>
+<td>Verify login fails with an invalid email and a valid password (for any role).</td>
+<td>An appropriate error message must be displayed (e.g., "Invalid credentials" or "Invalid email"), and the user must remain on the login page.</td>
 </tr>
 <tr>
-<td><strong>T_C_0.5</strong></td>
+<td><strong>T_C_1.5</strong></td>
 <td>Login</td>
-<td>Verify login fails with both invalid username and invalid password.</td>
+<td>Verify login fails with both invalid email and invalid password.</td>
 <td>An appropriate error message must be displayed, and the user must remain on the login page.</td>
 </tr>
 <tr>
-<td><strong>T_C_0.6</strong></td>
+<td><strong>T_C_1.6</strong></td>
 <td>Login</td>
-<td>Verify case sensitivity for the Username field.</td>
-<td>Login must fail if the username case does not match the stored value (e.g., <code>john.doe</code> should fail if the correct username is <code>John.Doe</code>).</td>
+<td>Verify case sensitivity for the email field.</td>
+<td>Login must fail if the email case does not match the stored value (e.g., <code>JohnDoe@service.com</code> should fail if the correct email is <code>johndoe@service.com</code>).</td>
 </tr>
 <tr>
-<td><strong>T_C_0.7</strong></td>
+<td><strong>T_C_1.7</strong></td>
 <td>Login</td>
 <td>Verify the system handles repeated failed login attempts (Brute-Force Protection).</td>
-<td>After N consecutive failed attempts (e.g., 5), the account must be temporarily locked or a CAPTCHA/other protective measure must be required.</td>
+<td>After <strong>N</strong> consecutive failed attempts (e.g., 5), the account must be temporarily locked or a CAPTCHA/other protective measure must be required.</td>
 </tr>
 <tr>
-<td><strong>T_C_0.8</strong></td>
-<td>Session</td>
-<td>Verify a logged-in user is automatically logged out after a period of inactivity (Session Timeout).</td>
-<td>The user must be redirected to the login page, and attempting to access an internal page must redirect them back to the login page.</td>
+<td><strong>T_C_1.8</strong></td>
+<td>Login</td>
+<td>Verify login fails when the email field is empty and the password field has data.</td>
+<td>An error message for the missing email (e.g., "Email is required") must be displayed, and the user must remain on the login page.</td>
 </tr>
 <tr>
-<td><strong>T_C_0.9</strong></td>
+<td><strong>T_C_1.9</strong></td>
+<td>Login</td>
+<td>Verify login fails when the password field is empty and the email field has data.</td>
+<td>An error message for the missing password (e.g., "Password is required") must be displayed, and the user must remain on the login page.</td>
+</tr>
+<tr>
+<td><strong>T_C_1.10</strong></td>
+<td>Login</td>
+<td>Verify login fails with an improperly formatted email (e.g., missing '@' or '.com').</td>
+<td>An appropriate format validation error message (e.g., "Please enter a valid email address") must be displayed.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="tc-1b-logout-session-management-test-cases">TC 1.B: Logout &amp; Session Management Test Cases</h2>
+<p>This section covers the test scenarios for <strong>session management</strong> and <strong>logout functionality</strong>, ensuring security, stability, and user session integrity.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case No.</strong></th>
+<th><strong>Module Name</strong></th>
+<th><strong>Test Case Description</strong></th>
+<th><strong>Acceptance Criteria</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T_C_1.11</td>
 <td>Logout</td>
 <td>Verify that clicking the Logout button successfully terminates the user session.</td>
 <td>The user must be redirected to the login page, and attempting to use the browser's "Back" button should not display any protected internal content.</td>
 </tr>
 <tr>
-<td><strong>T_C_0.10</strong></td>
-<td>Authorization</td>
-<td>Verify an Employee user cannot access a URL/page specific to the Admin role via direct URL navigation.</td>
-<td>The system must display an "Access Denied" error message, or redirect the user to their own dashboard.</td>
+<td>T_C_1.12</td>
+<td>Logout</td>
+<td>Verify that session cookies are properly cleared/invalidated upon successful logout.</td>
+<td>After logging out, checking the browser's developer tools should show that the session identifier/token cookie is removed or set to expired/invalid.</td>
+</tr>
+<tr>
+<td>T_C_1.13</td>
+<td>Session</td>
+<td>Verify a logged-in user is automatically logged out after a period of inactivity (Session Timeout).</td>
+<td>The user must be redirected to the login page, and attempting to access an internal page must redirect them back to the login page.</td>
+</tr>
+<tr>
+<td>T_C_1.14</td>
+<td>Session</td>
+<td>Verify the system does not allow simultaneous logins for the same account (or enforces specific session rules).</td>
+<td>When a user is logged in on Device A, a subsequent successful login on Device B must either terminate the session on Device A or the system must disallow the login on Device B and display a warning.</td>
+</tr>
+<tr>
+<td>T_C_1.15</td>
+<td>Session</td>
+<td>Verify the application handles security vulnerability warnings when accessing the application over HTTP (if HTTPS is required).</td>
+<td>If the application is accessed via <code>http://</code> instead of <code>https://</code>, the user should be automatically redirected to the secure HTTPS connection, or a security warning should be displayed.</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<p><strong>Module:</strong> Authentication &amp; Authorization<br />
-<strong>Scope:</strong> Covers Login, Logout, Session Management, and Role-based Access Control.</p>
+<h2 id="tc-1c-authorization-role-based-access-control-test-cases">TC 1.C: Authorization (Role-based Access Control) Test Cases</h2>
+<p>This section validates that users can only access resources permitted by their assigned roles, ensuring <strong>data security</strong> and <strong>role integrity</strong> throughout the system.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case No.</strong></th>
+<th><strong>Module Name</strong></th>
+<th><strong>Test Case Description</strong></th>
+<th><strong>Acceptance Criteria</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T_C_1.16</td>
+<td>Authorization</td>
+<td>Verify an Employee user cannot access a URL/page specific to the Admin role via direct URL navigation.</td>
+<td>The system must display an “Access Denied” error message, or redirect the user to their own dashboard.</td>
+</tr>
+<tr>
+<td>T_C_1.17</td>
+<td>Authorization</td>
+<td>Verify an unauthenticated/Guest user cannot access any authenticated internal page via direct URL navigation.</td>
+<td>The user must be immediately redirected to the Login page when attempting to access any protected resource (e.g., <code>/feed</code> or <code>/admin/dashboard</code>).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="tc-2-registration-test-cases">🧾 TC 2: Registration Test Cases</h2>
+<p>This section ensures the user registration process functions correctly, enforcing all <strong>validation rules</strong>, <strong>data integrity</strong>, and <strong>business logic</strong> for onboarding new users.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case No.</strong></th>
+<th><strong>Module Name</strong></th>
+<th><strong>Test Case Description</strong></th>
+<th><strong>Acceptance Criteria</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T_C_2.1</td>
+<td>Registration</td>
+<td>Verify a new user can successfully register with valid, unique, and required data.</td>
+<td>A success message must be displayed, the user must be redirected to a waiting/login page, and a new record must be created in the <code>USERS</code> table with: <code>isApproved = false</code>, <code>createdAt</code> set, and a valid <code>passwordHash</code>.</td>
+</tr>
+<tr>
+<td>T_C_2.2</td>
+<td>Registration</td>
+<td>Verify registration fails if the user attempts to register with an email that already exists in the system.</td>
+<td>An appropriate error message must be displayed (e.g., “Email already registered”), and the user must remain on the registration page. No new record should be created.</td>
+</tr>
+<tr>
+<td>T_C_2.3</td>
+<td>Registration</td>
+<td>Verify registration fails if the Name field is left empty.</td>
+<td>An error message indicating the field is required (e.g., “Name is mandatory”) must be displayed.</td>
+</tr>
+<tr>
+<td>T_C_2.4</td>
+<td>Registration</td>
+<td>Verify registration fails if the Email field is left empty.</td>
+<td>An error message indicating the field is required (e.g., “Email is required”) must be displayed.</td>
+</tr>
+<tr>
+<td>T_C_2.5</td>
+<td>Registration</td>
+<td>Verify registration fails if the Password field is left empty.</td>
+<td>An error message indicating the field is required (e.g., “Password is required”) must be displayed.</td>
+</tr>
+<tr>
+<td>T_C_2.6</td>
+<td>Registration</td>
+<td>Verify registration fails if the user provides an invalid email format (e.g., missing '@' or using spaces).</td>
+<td>A format validation error message (e.g., “Please enter a valid email address”) must be displayed.</td>
+</tr>
+<tr>
+<td>T_C_2.7</td>
+<td>Registration</td>
+<td>Verify registration fails if the Password does not meet complexity requirements (e.g., missing a special character or capital letter).</td>
+<td>A specific error message detailing the required password criteria must be displayed.</td>
+</tr>
+<tr>
+<td>T_C_2.8</td>
+<td>Registration</td>
+<td>Verify that the department field only accepts pre-defined valid values (<code>hr</code>, <code>recruitment</code>, <code>developer</code>).</td>
+<td>If the user attempts to submit a department value not in the list (e.g., “finance”), the system must reject the submission and display an error.</td>
+</tr>
+<tr>
+<td>T_C_2.9</td>
+<td>Registration</td>
+<td>Verify the system handles the maximum length allowed for the name field.</td>
+<td>If a name exceeds the allowed character limit, the system must either truncate the input or display an error message and prevent submission.</td>
+</tr>
+<tr>
+<td>T_C_2.10</td>
+<td>Registration</td>
+<td>Verify that the system automatically assigns a default <code>userRoleId</code> upon registration (likely the Employee role).</td>
+<td>After successful registration (T_C_2.1), the created user record must have a valid <code>userRoleId</code> reference corresponding to the Employee role.</td>
+</tr>
+</tbody>
+</table>
 
 
 
